@@ -11,11 +11,28 @@ npm install rn-thub-share-module
 ## Usage
 
 ```js
-import RnThubShareModule from "rn-thub-share-module";
+import RnThubShareModule from 'rn-thub-share-module';
 
-// ...
+RnThubImageLabelling.shareText(
+  texttobeshared,
+  (data) => {
+    console.log(data);
+  },
+  (errorMessage) => {
+    console.log(errorMessage);
+  }
+);
 
-const result = await RnThubShareModule.multiply(3, 7);
+RnThubImageLabelling.shareImage(
+  imageUrl,
+  imageExtension,
+  (data) => {
+    console.log(data);
+  },
+  (errorMessage) => {
+    console.log(errorMessage);
+  }
+);
 ```
 
 ## Contributing
