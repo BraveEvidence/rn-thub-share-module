@@ -27,6 +27,7 @@ class RnThubShareModuleModule(private val reactContext: ReactApplicationContext)
       action = Intent.ACTION_SEND
       putExtra(Intent.EXTRA_TEXT, text)
       type = "text/plain"
+      flags = Intent.FLAG_ACTIVITY_NEW_TASK
     }
     val shareIntent = Intent.createChooser(sendIntent, null)
     reactContext.startActivity(shareIntent)
@@ -43,6 +44,7 @@ class RnThubShareModuleModule(private val reactContext: ReactApplicationContext)
         action = Intent.ACTION_SEND
         putExtra(Intent.EXTRA_STREAM, uri)
         type = extension
+        flags = Intent.FLAG_ACTIVITY_NEW_TASK
       }
       reactContext.startActivity(Intent.createChooser(shareIntent, "Common services"))
 

@@ -1,6 +1,6 @@
 {
   "name": "rn-thub-share-module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Share Module",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
